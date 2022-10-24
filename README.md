@@ -12,8 +12,8 @@
 ##### Technology stack:
 * Python 3.8, Django 3.2;
 * SQLite;
-* Beautiful Soup;
-* Requests.
+* Selenium;
+* Beautiful Soup.
 
 ##### Getting Started
 * `$ pip install -r requirements.txt`.
