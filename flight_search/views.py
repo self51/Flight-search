@@ -8,12 +8,12 @@ from .service import Parser
 def flight_search(request):
 
     if 'start_city' in request.GET:
-        p = Parser()
         start_city = request.GET.get('start_city')
         destination_city = request.GET.get('destination_city')
         date = request.GET.get('date')
 
-        page_source = p.get_html_content(start_city, destination_city, date)
+        p = Parser(start_city, destination_city, date)
+        page_source = p.get_html_content()
         flights = p.get_flights(page_source)
 
         if flights == 'error':
